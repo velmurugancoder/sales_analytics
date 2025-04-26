@@ -1,0 +1,16 @@
+2025/04/26 18:24:17 BuildConnection (+) 
+2025/04/26 18:24:17 Dbconnection (+) 
+2025/04/26 18:24:17 Db_detailReading (+) 
+2025/04/26 18:24:17 Db_detailReading (-) 
+2025/04/26 18:24:17 connectionpoolConfig (+) 
+2025/04/26 18:24:17 connectionpoolConfig (-) 
+2025/04/26 18:24:17 Dbconnection (-) 
+2025/04/26 18:24:17 BuildConnection (-) 
+2025/04/26 18:24:26 Get_revenuedetails (+) 
+2025/04/26 18:24:26  GetRevenuebyProd (+) 
+2025/04/26 18:24:26  GetRevenuebyProd (-) 
+2025/04/26 18:24:26 Get_revenuedetails (-) 
+2025/04/26 18:24:45 Get_revenuedetails (+) 
+2025/04/26 18:24:45 GetRevenuebyCat(+)
+2025/04/26 18:25:14 Func: sales_analytics/sales_analyticsprocess/revenue.GetRevenuebyCat | Line: 143 | Error: Error 1054 (42S22): Unknown column 'order_items.quantity' in 'SELECT'
+2025/04/26 18:25:14 Func: sales_analytics/sales_analyticsprocess/revenue.Get_revenuedetails | Line: 60 | Error: Error 1054 (42S22): Unknown column 'order_items.quantity' in 'SELECT'

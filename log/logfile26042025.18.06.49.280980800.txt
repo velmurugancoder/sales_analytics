@@ -1,0 +1,13 @@
+2025/04/26 18:06:49 BuildConnection (+) 
+2025/04/26 18:06:49 Dbconnection (+) 
+2025/04/26 18:06:49 Db_detailReading (+) 
+2025/04/26 18:06:49 Db_detailReading (-) 
+2025/04/26 18:06:49 connectionpoolConfig (+) 
+2025/04/26 18:06:49 connectionpoolConfig (-) 
+2025/04/26 18:06:49 Dbconnection (-) 
+2025/04/26 18:06:49 BuildConnection (-) 
+2025/04/26 18:06:53 Get_revenuedetails (+) 
+2025/04/26 18:06:53 Get_revenuedetails (-) 
+2025/04/26 18:07:23 Get_revenuedetails (+) 
+2025/04/26 18:07:23 Func: sales_analytics/sales_analyticsprocess/revenue.GetTotalRevenue | Line: 92 | Error: sql: Scan error on column index 0, name "total_revenue": converting NULL to float64 is unsupported
+2025/04/26 18:07:23 Func: sales_analytics/sales_analyticsprocess/revenue.Get_revenuedetails | Line: 60 | Error: sql: Scan error on column index 0, name "total_revenue": converting NULL to float64 is unsupported

@@ -1,0 +1,12 @@
+2025/04/26 18:18:46 BuildConnection (+) 
+2025/04/26 18:18:46 Dbconnection (+) 
+2025/04/26 18:18:46 Db_detailReading (+) 
+2025/04/26 18:18:46 Db_detailReading (-) 
+2025/04/26 18:18:46 connectionpoolConfig (+) 
+2025/04/26 18:18:46 connectionpoolConfig (-) 
+2025/04/26 18:18:46 Dbconnection (-) 
+2025/04/26 18:18:46 BuildConnection (-) 
+2025/04/26 18:18:56 Get_revenuedetails (+) 
+2025/04/26 18:18:56  GetRevenuebyProd (+) 
+2025/04/26 18:18:56 Func: sales_analytics/sales_analyticsprocess/revenue.GetRevenuebyProd | Line: 116 | Error: Error 1054 (42S22): Unknown column 'orders.date_of_sale' in 'WHERE'
+2025/04/26 18:18:56 Func: sales_analytics/sales_analyticsprocess/revenue.Get_revenuedetails | Line: 60 | Error: Error 1054 (42S22): Unknown column 'orders.date_of_sale' in 'WHERE'

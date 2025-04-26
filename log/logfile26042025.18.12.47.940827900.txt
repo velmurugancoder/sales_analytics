@@ -1,0 +1,14 @@
+2025/04/26 18:12:47 BuildConnection (+) 
+2025/04/26 18:12:47 Dbconnection (+) 
+2025/04/26 18:12:47 Db_detailReading (+) 
+2025/04/26 18:12:47 Db_detailReading (-) 
+2025/04/26 18:12:47 connectionpoolConfig (+) 
+2025/04/26 18:12:47 connectionpoolConfig (-) 
+2025/04/26 18:12:47 Dbconnection (-) 
+2025/04/26 18:12:47 BuildConnection (-) 
+2025/04/26 18:12:53 Get_revenuedetails (+) 
+2025/04/26 18:12:53 Get_revenuedetails (-) 
+2025/04/26 18:14:23 Get_revenuedetails (+) 
+2025/04/26 18:14:23  GetRevenuebyProd (+) 
+2025/04/26 18:14:23 Func: sales_analytics/sales_analyticsprocess/revenue.GetRevenuebyProd | Line: 116 | Error: Error 1054 (42S22): Unknown column 'products.product_name' in 'SELECT'
+2025/04/26 18:14:23 Func: sales_analytics/sales_analyticsprocess/revenue.Get_revenuedetails | Line: 60 | Error: Error 1054 (42S22): Unknown column 'products.product_name' in 'SELECT'

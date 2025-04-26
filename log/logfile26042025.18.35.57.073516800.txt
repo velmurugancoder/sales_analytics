@@ -1,0 +1,16 @@
+2025/04/26 18:35:57 BuildConnection (+) 
+2025/04/26 18:35:57 Dbconnection (+) 
+2025/04/26 18:35:57 Db_detailReading (+) 
+2025/04/26 18:35:57 Db_detailReading (-) 
+2025/04/26 18:35:57 connectionpoolConfig (+) 
+2025/04/26 18:35:57 connectionpoolConfig (-) 
+2025/04/26 18:35:57 Dbconnection (-) 
+2025/04/26 18:35:57 BuildConnection (-) 
+2025/04/26 18:36:07  Get_Productsdetails (+) 
+2025/04/26 18:36:07  Get_Productsdetails (-) 
+2025/04/26 18:36:58  Get_Productsdetails (+) 
+2025/04/26 18:36:58  Get_Productsdetails (-) 
+2025/04/26 18:37:28  Get_Productsdetails (+) 
+2025/04/26 18:37:28  GetTopCategories (+) 
+2025/04/26 18:37:28 Func: sales_analytics/sales_analyticsprocess/products.GetTopCategories | Line: 134 | Error: Error 1054 (42S22): Unknown column 'order_items.quantity' in 'SELECT'
+2025/04/26 18:37:28 Func: sales_analytics/sales_analyticsprocess/products.Get_Productsdetails | Line: 71 | Error: Error 1054 (42S22): Unknown column 'order_items.quantity' in 'SELECT'

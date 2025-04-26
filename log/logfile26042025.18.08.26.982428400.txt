@@ -1,0 +1,11 @@
+2025/04/26 18:08:26 BuildConnection (+) 
+2025/04/26 18:08:26 Dbconnection (+) 
+2025/04/26 18:08:26 Db_detailReading (+) 
+2025/04/26 18:08:26 Db_detailReading (-) 
+2025/04/26 18:08:26 connectionpoolConfig (+) 
+2025/04/26 18:08:26 connectionpoolConfig (-) 
+2025/04/26 18:08:26 Dbconnection (-) 
+2025/04/26 18:08:26 BuildConnection (-) 
+2025/04/26 18:08:32 Get_revenuedetails (+) 
+2025/04/26 18:08:32 Func: sales_analytics/sales_analyticsprocess/revenue.GetTotalRevenue | Line: 92 | Error: sql: Scan error on column index 0, name "total_revenue": converting NULL to string is unsupported
+2025/04/26 18:08:32 Func: sales_analytics/sales_analyticsprocess/revenue.Get_revenuedetails | Line: 60 | Error: sql: Scan error on column index 0, name "total_revenue": converting NULL to string is unsupported
