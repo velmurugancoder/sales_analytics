@@ -1,50 +1,58 @@
-
 -- Customer Table
-CREATE TABLE customers (
-    id SERIAL PRIMARY KEY,
-    customer_id VARCHAR(50) UNIQUE NOT NULL,
-    name TEXT,
-    email TEXT,
-    address TEXT,
-    created_date datetime,
-    updated_date TIMESTAMP
-);
+CREATE TABLE `customers` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `customer_id` varchar(50) NOT NULL,
+  `name` text DEFAULT NULL,
+  `email` text DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `customer_id` (`customer_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- Product Table
-CREATE TABLE products (
-    id SERIAL PRIMARY KEY,
-    product_id VARCHAR(50) UNIQUE NOT NULL,
-    name TEXT,
-    category TEXT,
-    created_date datetime,
-    updated_date datetime
-);
+CREATE TABLE `products` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_id` varchar(50) NOT NULL,
+  `name` text DEFAULT NULL,
+  `category` text DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `product_id` (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- Orders Table
-CREATE TABLE orders (
-    id SERIAL PRIMARY KEY,
-    order_id VARCHAR(100) UNIQUE NOT NULL,
-    customer_id VARCHAR(50),
-    region TEXT,
-    date_of_sale DATE,
-    payment_method TEXT,
-    shipping_cost DECIMAL(10,2),
-    created_date datetime,
-    updated_date datetime,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
-);
+CREATE TABLE `orders` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` varchar(100) NOT NULL,
+  `customer_id` bigint(20) unsigned DEFAULT NULL,
+  `region` text DEFAULT NULL,
+  `date_of_sale` date DEFAULT NULL,
+  `payment_method` text DEFAULT NULL,
+  `shipping_cost` decimal(10,2) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `order_id` (`order_id`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- Order Items Table
-CREATE TABLE order_items (
-    id SERIAL PRIMARY KEY,
-    order_id VARCHAR(100),
-    product_id VARCHAR(50),
-    quantity_sold INT,
-    unit_price DECIMAL(10,2),
-    discount DECIMAL(5,2),
-   	created_date datetime,
-    updated_date datetime,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
-    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
-);
-
+CREATE TABLE `order_items` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` bigint(20) unsigned DEFAULT NULL,
+  `product_id` bigint(20) unsigned DEFAULT NULL,
+  `quantity_sold` int(11) DEFAULT NULL,
+  `unit_price` decimal(10,2) DEFAULT NULL,
+  `discount` decimal(5,2) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`),
+  KEY `product_id` (`product_id`),
+  CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
